@@ -29,17 +29,14 @@ Se ejecuta este comando en Python para importar la libreria de Pillow, antes de 
 
     def convertirApng(self, rutaOrigen,rutaSinExtension):
     
-        imagenIn = Image.open(rutaOrigen)       Abre he identifica el archivo de imagen dado. 
+        imagenIn = Image.open(rutaOrigen)                            Abre he identifica el archivo de imagen dado. 
+        rgb_im = imagenIn.convert('RGB')                             El modo de la imagen se convierte a RGB (Píxeles de 3x8 bits, color verdadero). 
+        rutaDestino=rutaSinExtension+'.png'                          La ruta sin extension es concatenada a el formato de imagen a convertir.
+        rgb_im.save(rutaDestino, quality=95)                         La imagen se guarda con el nombre de archivo indicado y quality establece la calidad de la imagen.
+        print("El archivo se guardo de forma exitosa en la siguiente ruta "+rutaDestino)                 Imprime la ruta donde quedo la imagen.
+        os.startfile(rutaDestino)                                    Abre el archivo con su programa asociado.
         
-        rgb_im = imagenIn.convert('RGB')        El modo de la imagen se convierte a RGB (Píxeles de 3x8 bits, color verdadero). 
         
-        rutaDestino=rutaSinExtension+'.png'     La ruta sin extension es concatenada a el formato de imagen a convertir.
-        
-        rgb_im.save(rutaDestino, quality=95)    La imagen se guarda con el nombre de archivo indicado y quality establece la calidad de la imagen.
-        
-        print("El archivo se guardo de forma exitosa en la siguiente ruta "+rutaDestino)  imprime la ruta donde quedo la imagen.
-        
-        os.startfile(rutaDestino)  Abre el archivo con su programa asociado.
 
 Los siguientes metodos convertidores no se les hace comentarios ya que comparten las mismas lineas de código con el metodo .png anteriormente explicado, con la diferencia que cada metodo se modifica a la extencion especifica diferente. 
 
@@ -74,7 +71,31 @@ Los siguientes metodos convertidores no se les hace comentarios ya que comparten
         os.startfile(rutaDestino)
         
         
+**Metodo para convertir Imagen**        
 
-        
+    def convertirImagen(self):    
+        c=Conversor()                                                                     Instancia de la clase
+        print("\n¿Desea convertir alguna imagen ?")                                       Se imprime pregunta
+        print("Presione s para si")                                                       Se imprimen opciones
+        print("Presione n para no\n")
+
+        respuesta=input("Escribe tu respuesta: ")                                         Se toma la respuesta
+
+        if respuesta == "s":                                                              Si la respuesta es afirmativa toma este camino
+            
+            rutaOrigen=input("\nIngrese la ruta de la imagen que desea convertir: ")      Se captura la ruta de la imagen a convertir
+            
+
+
+            rutaOrigenDividida=rutaOrigen.split(".")#La ruta se divide a partir del "."
+            rutaSinExtension=rutaOrigenDividida[0]#ruta sin extension de archivo seleccionado
+            ext=rutaOrigenDividida[-1]#extension de archivo seleccionado
+    
+            print("La extension de la imagen seleccionada es  ."+ext+"\n")#Imprime la extension del archivo        
+            
+                     
+
+
+
         
         
