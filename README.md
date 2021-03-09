@@ -206,3 +206,5 @@ Si el tipo de archivo a convertir su extención BMP, en el siguiente metodo mues
             print("\nPor favor lea atentamente e ingrese alguna de las opciones segun corresponda.")
             c.convertirImagen()                    Si el valor ingresado no corresponde a las opciones se inica el programa nuevamente
             
+
+            
