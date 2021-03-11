@@ -213,7 +213,7 @@ Si el tipo de archivo a convertir su extención BMP, en el siguiente metodo mues
 * **Ejecutable desde Sistema Operativo Linux. Aplicación creada por consola**
 
 
-1. Una vez hallamos creado nuestro ejecutable a travez de Paint Select, este nos creará unas carpetas llamadas **"build", "dist" y "pycache"*
+1. Una vez hayamos creado nuestro ejecutable a travez de Paint Select, este nos creará unas carpetas llamadas **"build", "dist" y "pycache"*
 
 
 ![image](https://user-images.githubusercontent.com/44372737/110686241-3c8b0080-81ad-11eb-9ec1-d0f528524c99.png)
